@@ -31,7 +31,7 @@ const getEmployeesByFirstName = (req,res) => {
 
     pool.query(sql, (err, results) => {
         if (err) return apiErrorHandler(res, err)
-        return res.json(first_name);
+        return res.json(results);
     })
 }
 
