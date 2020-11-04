@@ -14,7 +14,7 @@ const getEmployees = (req,res) => {
 const getEmployeesById = (req,res) => {
     //select the employees by ID
     let id = req.params.id;
-    let sql ="SELECT * FROM employees WHERE ID = ?";
+    let sql ="SELECT * FROM employees WHERE ID = emp_no";
     sql = mysql.format(sql, [id]);
 
     pool.query(sql, (err, rows) => {
