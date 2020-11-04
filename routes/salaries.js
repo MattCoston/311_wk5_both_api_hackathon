@@ -1,12 +1,11 @@
 const express = require("express");
 const router = express.Router();
 
-//  Get all employees
-router.get("/employees");
-//  Get employees by ID
-router.get("/employees/:id");
-//  Get employees by first name
-router.get("/employees/firstname/:first_name");
+//  Get idk what
+router.get("/top");
+//  Get idk what by ID
+router.get("/:min/:max");
+
 
 
 
