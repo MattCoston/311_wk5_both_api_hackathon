@@ -4,7 +4,7 @@ const { apiErrorHandler } = require('../error/ApiError');
 
 const getEmployees = (req,res) => {
     
-    pool.query("SELECT * FROM employees", (err, rows) => {
+    pool.query("SELECT * FROM employees LIMIT 50", (err, rows) => {
         //the following is assuming there is a function to handle errors named handleSQLErrors
         if (err) return apiErrorHandler(res,err)
         return res.json(rows);
