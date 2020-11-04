@@ -1,15 +1,15 @@
 const express = require("express");
-const router = express.router();
+const router = express.Router();
 
 // Grabbing the Chris's controller folder
 const employeesController = require("../controllers/employees");
 //  Get all employees
-router.get("/employees", employeesController.getEmployees);
+router.get("/", employeesController.getEmployees);
 //  Get employees by ID
-router.get("/employees/:id", employeesController.getEmployeesById);
+router.get("/:id", employeesController.getEmployeesById);
 //  Get employees by first name
 router.get(
-  "/employees/firstname/:first_name",
+  "/firstname/:first_name",
   employeesController.getEmployeesByFirstName
 );
 module.exports = router;
