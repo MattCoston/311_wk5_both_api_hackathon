@@ -1,6 +1,6 @@
 const mysql = require('mysql');
 const pool = require("../mysql/connection");
-const { apiErrorHandler } = require('../ApiError');
+const { apiErrorHandler } = require('../error/ApiError');
 
 const getEmployees = (req,res) => {
     
@@ -21,8 +21,6 @@ const getEmployeesById = (req,res) => {
         if (err) return handleSQLError(res, err)
         return res.json(rows);
     })
-    
-  
 }
 
 const getEmployeesByFirstName = (req,res) => {
@@ -35,9 +33,6 @@ const getEmployeesByFirstName = (req,res) => {
         if (err) return apiErrorHandler(res, err)
         return res.json(first_name);
     })
-
-    
-  
 }
 
 
